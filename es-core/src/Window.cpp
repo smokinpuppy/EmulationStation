@@ -328,7 +328,7 @@ void Window::onSleep()
 	Renderer::setMatrix(Eigen::Affine3f::Identity());
 	unsigned char opacity = Settings::getInstance()->getString("ScreenSaverBehavior") == "dim" ? 0xA0 : 0xFF;
 	if(Settings::getInstance()->getString("ScreenSaverBehavior") == "video"){
-		system("./home/pi/playvid");
+		system("playvid");
 	} else {
 		Renderer::drawRect(0, 0, Renderer::getScreenWidth(), Renderer::getScreenHeight(), 0x00000000 | opacity);
 	}
