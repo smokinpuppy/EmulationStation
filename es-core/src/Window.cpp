@@ -336,5 +336,6 @@ void Window::onSleep()
 
 void Window::onWake()
 {
-
+	system("sudo pkill -9 -f \"/usr/bin/playvid\"");
+	system("sudo pkill -9 -f \"/usr/bin/omxplayer\"");
 }
