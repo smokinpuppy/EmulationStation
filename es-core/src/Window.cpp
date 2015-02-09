@@ -107,6 +107,7 @@ void Window::input(InputConfig* config, Input input)
 		mTimeSinceLastInput = 0;
 		mSleeping = false;
 		onWake();
+		system("sudo pkill -9 -f \"/usr/bin/omxplayer\"");
 		return;
 	}
 
@@ -336,6 +337,5 @@ void Window::onSleep()
 
 void Window::onWake()
 {
-	system("sudo pkill -9 -f \"/usr/bin/playvid\"");
-	system("sudo pkill -9 -f \"/usr/bin/omxplayer\"");
+	
 }
